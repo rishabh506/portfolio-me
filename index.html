@@ -2,548 +2,186 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rishabh Agarwal | Cloud & DevOps Engineer</title>
-  <meta name="description" content="Portfolio of Rishabh Agarwal, a Cloud & DevOps Engineer specializing in AWS, Linux, Docker, and infrastructure fundamentals.">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <meta property="og:title" content="Rishabh Agarwal Portfolio">
-  <meta property="og:description" content="Cloud & DevOps Engineer specializing in AWS, Linux, Docker, and system design. View my projects, certifications, and interactive terminal.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101613" id="themeColor">
+  <title>Rishabh Agarwal | Web Development &amp; Cloud Computing</title>
+  <meta name="description" content="Rishabh Agarwal is a BCA student at JECRC University, Jaipur, exploring web development, cloud computing, and DevOps. Open to internships and entry-level opportunities.">
+  <meta property="og:title" content="Rishabh Agarwal | Developer Portfolio">
+  <meta property="og:description" content="Web development, cloud computing, and DevOps projects by Rishabh Agarwal, BCA student at JECRC University.">
   <meta property="og:type" content="website">
-  
-  <!-- Premium Fonts -->
+  <meta property="og:url" content="https://portfolio-me-lac-eta.vercel.app/">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='12' fill='%2370e1c4'/><text x='20' y='27' font-size='22' text-anchor='middle' fill='%23101613' font-family='Arial' font-weight='700'>R</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="dark">
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- SVG Gradient definition for Skills dials -->
-  <svg style="width:0; height:0; position:absolute;">
-    <defs>
-      <linearGradient id="dial-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="var(--primary)" />
-        <stop offset="100%" stop-color="var(--accent)" />
-      </linearGradient>
-    </defs>
-  </svg>
-
-  <!-- Loader -->
-  <div id="loader">
-    <div class="loader-logo">rishabh@cloud-infra:~$</div>
-    <div class="loader-bar"><div class="loader-fill"></div></div>
-  </div>
-
-  <!-- Scroll Progress & Ambient Glow -->
-  <div id="scrollbar"></div>
-  <div id="glow-container"></div>
-
-  <!-- Floating Background Telemetry Nodes -->
-  <div class="floating-nodes">
-    <div class="float-node" style="width: 320px; height: 320px; top: 12%; left: 8%;"></div>
-    <div class="float-node" style="width: 420px; height: 420px; bottom: 15%; right: 6%; --primary-glow: var(--accent-glow);"></div>
-  </div>
-
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-inner">
-      <div class="logo"><span class="dot"></span> rishabh<span style="color:var(--text-dim)">.infra</span></div>
-      <div class="nav-links">
-        <a href="#about">about</a>
-        <a href="#skills">skills</a>
-        <a href="#projects">projects</a>
-        <a href="#experience">experience</a>
-        <a href="#certifications">certs</a>
-        <a href="#contact">contact</a>
-      </div>
-      <div class="nav-actions">
-        <div class="theme-toggle" id="themeToggle" title="Toggle theme"><span id="themeIcon">🌙</span></div>
-        <button class="menu-btn" id="menuBtn">☰</button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <canvas id="particles"></canvas>
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <div class="eyebrow">status: open to internships</div>
-        <h1>Hi, I'm <span class="grad">Rishabh Agarwal</span></h1>
-        <div class="role-line" id="roleLine"></div>
-        <p>A Computer Applications student at JECRC University with an obsession for systems in production. I build cloud architectures on AWS, write code in Python, and containerize microservices using Docker.</p>
-        <div class="cta-row">
-          <a href="Resume.pdf" download class="btn btn-primary">⬇ Download Resume</a>
-          <a href="#projects" class="btn">View Deployments</a>
-          <a href="#contact" class="btn">Contact dispatcher</a>
-        </div>
-        <div class="status-row">
-          <span>📍 Jaipur, Rajasthan, India</span>
-          <span>uptime: <b>2 yrs learning</b></span>
-          <span>focus: <b>AWS · Linux · DevOps</b></span>
-        </div>
-      </div>
-      
-      <!-- Interactive CLI Terminal Simulator (CRT Mode) -->
-      <div class="terminal" id="terminal" onclick="focusTerminal()">
-        <div class="term-bar">
-          <span></span><span></span><span></span>
-          <div class="term-title">guest@rishabh-infra:~</div>
-        </div>
-        <div class="term-body" id="termBody">
-          <div class="term-line">Welcome to Rishabh's portfolio terminal!</div>
-          <div class="term-line">Type <span style="color:var(--primary)">help</span> for a list of available commands.</div>
-          <div id="termOutput"></div>
-          <div class="term-input-line">
-            <span class="prompt">guest@rishabh-infra:~$</span>
-            <input type="text" id="termInput" autocomplete="off" autofocus>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- System Telemetry (About Section) -->
-  <section id="about">
-    <div class="wrap reveal">
-      <div class="eyebrow">telemetry</div>
-      <h2 class="section-title">Fundamentals first.</h2>
-      <p class="section-sub">A glance at my background, learning style, and system specs.</p>
-      
-      <div class="telemetry-grid">
-        <div class="card about-text">
-          <p><strong>I fell in love with infrastructure after recovering a crashed server</strong> — since then, I've spent my time inside terminal consoles spinning up EC2 instances, tracing packet routes, and configuring VPC network isolation levels.</p>
-          <p>Instead of jumping straight into black-box automation, I focus on the fundamentals: system administration, container internals, shell scripting, and core TCP/IP networking, ensuring I understand <strong>why systems fail</strong> before writing automation logic around them.</p>
-          <p>Collaboratively, I've represented my university at the <strong>Smart India Hackathon</strong>, mentored peers under <strong>NITI Aayog</strong>, and volunteered in the <strong>National Service Scheme</strong>, developing strong coordination and communication under pressure.</p>
-          
-          <div class="tag-list">
-            <span class="tag">BCA (Cloud Computing)</span>
-            <span class="tag">JECRC University</span>
-            <span class="tag">2024 – 2027</span>
-            <span class="tag">Goal: Cloud/DevOps Engineer</span>
-          </div>
-        </div>
-        
-        <div class="metrics-dashboard">
-          <div class="metric-card">
-            <div class="metric-num" data-count="4">0</div>
-            <div class="metric-label">Projects Deployed</div>
-          </div>
-          <div class="metric-card accent">
-            <div class="metric-num" data-count="10">0</div>
-            <div class="metric-label">Repos on GitHub</div>
-          </div>
-          <div class="metric-card accent">
-            <div class="metric-num" data-count="4">0</div>
-            <div class="metric-label">Certs Earned</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-num" data-count="14">0</div>
-            <div class="metric-label">Tools Configured</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Stack -->
-  <section id="skills" style="background:var(--card-2);">
-    <div class="wrap reveal">
-      <div class="eyebrow">capabilities</div>
-      <h2 class="section-title">The engineering stack.</h2>
-      <p class="section-sub">Technological metrics rated by hands-on lab environment testing.</p>
-      
-      <div class="skills-grid">
-        <!-- AWS Skills with Circular Telemetry Dials -->
-        <div class="skill-cat">
-          <h3>☁️ AWS Cloud Services</h3>
-          <div class="skill-dial-grid">
-            <div class="skill-dial-container">
-              <div class="skill-dial">
-                <svg viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="40" class="dial-bg"></circle>
-                  <circle cx="50" cy="50" r="40" class="dial-fill" data-percent="82"></circle>
-                </svg>
-                <div class="dial-text">82%</div>
-              </div>
-              <div class="dial-label">Amazon EC2</div>
-            </div>
-            
-            <div class="skill-dial-container">
-              <div class="skill-dial">
-                <svg viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="40" class="dial-bg"></circle>
-                  <circle cx="50" cy="50" r="40" class="dial-fill" data-percent="78"></circle>
-                </svg>
-                <div class="dial-text">78%</div>
-              </div>
-              <div class="dial-label">Amazon VPC</div>
-            </div>
-
-            <div class="skill-dial-container">
-              <div class="skill-dial">
-                <svg viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="40" class="dial-bg"></circle>
-                  <circle cx="50" cy="50" r="40" class="dial-fill" data-percent="75"></circle>
-                </svg>
-                <div class="dial-text">75%</div>
-              </div>
-              <div class="dial-label">Amazon RDS</div>
-            </div>
-
-            <div class="skill-dial-container">
-              <div class="skill-dial">
-                <svg viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="40" class="dial-bg"></circle>
-                  <circle cx="50" cy="50" r="40" class="dial-fill" data-percent="80"></circle>
-                </svg>
-                <div class="dial-text">80%</div>
-              </div>
-              <div class="dial-label">3-Tier Sys</div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="skill-cat">
-          <h3>🖥️ Infra & Versioning</h3>
-          <div class="skill-row"><div class="lbl"><span>Linux Administration</span><span>78%</span></div><div class="meter"><div class="meter-fill" data-w="78"></div></div></div>
-          <div class="skill-row"><div class="lbl"><span>Docker Containerization</span><span>72%</span></div><div class="meter"><div class="meter-fill" data-w="72"></div></div></div>
-          <div class="skill-row"><div class="lbl"><span>Git & GitHub</span><span>88%</span></div><div class="meter"><div class="meter-fill" data-w="88"></div></div></div>
-          <div class="skill-row"><div class="lbl"><span>TCP/IP Networking</span><span>70%</span></div><div class="meter"><div class="meter-fill" data-w="70"></div></div></div>
-        </div>
-        
-        <div class="skill-cat">
-          <h3>💻 Languages</h3>
-          <div class="skill-row"><div class="lbl"><span>Python</span><span>80%</span></div><div class="meter"><div class="meter-fill" data-w="80"></div></div></div>
-          <div class="skill-row"><div class="lbl"><span>Java</span><span>70%</span></div><div class="meter"><div class="meter-fill" data-w="70"></div></div></div>
-          <div class="skill-row"><div class="lbl"><span>C++</span><span>65%</span></div><div class="meter"><div class="meter-fill" data-w="65"></div></div></div>
-          <div class="skill-row"><div class="lbl"><span>JavaScript</span><span>70%</span></div><div class="meter"><div class="meter-fill" data-w="70"></div></div></div>
-        </div>
-        
-        <div class="skill-cat">
-          <h3>🎨 Frontend & DBs</h3>
-          <div class="skill-row"><div class="lbl"><span>HTML / CSS Styling</span><span>85%</span></div><div class="meter"><div class="meter-fill" data-w="85"></div></div></div>
-          <div class="skill-row"><div class="lbl"><span>React.js</span><span>62%</span></div><div class="meter"><div class="meter-fill" data-w="62"></div></div></div>
-          <div class="skill-row"><div class="lbl"><span>MySQL Database</span><span>75%</span></div><div class="meter"><div class="meter-fill" data-w="75"></div></div></div>
-          <div class="skill-row"><div class="lbl"><span>MongoDB</span><span>65%</span></div><div class="meter"><div class="meter-fill" data-w="65"></div></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Container Deployments (Projects) -->
-  <section id="projects">
-    <div class="wrap reveal">
-      <div class="eyebrow">deployments</div>
-      <h2 class="section-title">System builds.</h2>
-      <p class="section-sub">Active projects fetched and filtered from <a href="https://github.com/rishabh506" target="_blank" style="color:var(--primary)">github.com/rishabh506</a>.</p>
-      
-      <div class="filters">
-        <button class="filter-btn active" data-f="all">All Clusters</button>
-        <button class="filter-btn" data-f="cloud">Cloud / Network</button>
-        <button class="filter-btn" data-f="python">Python Scripts</button>
-        <button class="filter-btn" data-f="web">Web Frontends</button>
-        <button class="filter-btn" data-f="js">JavaScript DOM</button>
-      </div>
-      
-      <div class="proj-grid" id="projGrid">
-        <!-- Card 1 -->
-        <div class="proj-card" data-cat="cloud">
-          <div class="proj-top">☁️<div class="proj-badge">Active Node</div></div>
-          <div class="proj-body">
-            <h4><span class="proj-status-dot"></span> AWS 3-Tier Architecture</h4>
-            <p>Production-ready VPC structure incorporating public subnets for web layers, private subnets for applications, and database subnets. Uses EC2 instances, RDS databases, custom route tables, and strict security groups.</p>
-            <div class="proj-meta">
-              <span>Port: <b>443</b></span>
-              <span>Region: <b>us-east-1</b></span>
-            </div>
-            <div class="proj-tech"><span>VPC</span><span>EC2</span><span>RDS</span><span>Security Groups</span><span>IAM</span></div>
-            <div class="proj-links">
-              <a href="https://github.com/rishabh506" target="_blank">↗ Source code</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="proj-card" data-cat="python">
-          <div class="proj-top">🥗<div class="proj-badge">Stable</div></div>
-          <div class="proj-body">
-            <h4><span class="proj-status-dot"></span> Indian Meal Planner</h4>
-            <p>An interactive, AI-enhanced nutritional planner designed for Indian culinary types, utilizing Python and Streamlit to map recipes, calories, and structured menus.</p>
-            <div class="proj-meta">
-              <span>Port: <b>8501</b></span>
-              <span>Runtime: <b>Python 3.10</b></span>
-            </div>
-            <div class="proj-tech"><span>Python</span><span>Streamlit</span><span>OpenAI API</span><span>CSS</span></div>
-            <div class="proj-links">
-              <a href="https://github.com/rishabh506" target="_blank">↗ Source code</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="proj-card" data-cat="web">
-          <div class="proj-top">🛒<div class="proj-badge">Static Site</div></div>
-          <div class="proj-body">
-            <h4><span class="proj-status-dot"></span> Amazon Clone UI</h4>
-            <p>A full responsive UI replica of Amazon's website interface. Emphasizes clean semantic markup, flexbox/grid layout patterns, and client-side interactions.</p>
-            <div class="proj-meta">
-              <span>Port: <b>80</b></span>
-              <span>Type: <b>Static Page</b></span>
-            </div>
-            <div class="proj-tech"><span>HTML5</span><span>CSS3 Grid</span><span>JavaScript DOM</span></div>
-            <div class="proj-links">
-              <a href="https://github.com/rishabh506" target="_blank">↗ Source code</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="proj-card" data-cat="js">
-          <div class="proj-top">🎈<div class="proj-badge">Interactive</div></div>
-          <div class="proj-body">
-            <h4><span class="proj-status-dot"></span> JS Bubble Game</h4>
-            <p>A dynamic, mouse-click game engine operating in the browser DOM. Built with a continuous coordinate generation loop to test responsive score ticking.</p>
-            <div class="proj-meta">
-              <span>Port: <b>3000</b></span>
-              <span>Engine: <b>Vanilla JS</b></span>
-            </div>
-            <div class="proj-tech"><span>JavaScript</span><span>CSS Animations</span><span>HTML5</span></div>
-            <div class="proj-links">
-              <a href="https://github.com/rishabh506" target="_blank">↗ Source code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Activity Audit Log (Experience & Education) -->
-  <section id="experience" style="background:var(--card-2);">
-    <div class="wrap reveal">
-      <div class="eyebrow">audit log</div>
-      <h2 class="section-title">Deployment timeline.</h2>
-      <p class="section-sub">Chronological logs of professional milestones and educational systems.</p>
-      
-      <div class="timeline">
-        <div class="t-item">
-          <div class="t-date">2024 — PRESENT</div>
-          <h4>Vice President | Media Club</h4>
-          <div class="org">JECRC University · Jaipur</div>
-          <p>Overseeing media strategies, operational event logistics, and coordinating cross-functional team roles inside university-level productions.</p>
-        </div>
-        
-        <div class="t-item">
-          <div class="t-date">APR 2025 — PRESENT</div>
-          <h4>Student Mentor</h4>
-          <div class="org">NITI Aayog · Jaipur</div>
-          <p>Guiding fellow students through tech challenges, translating infrastructure concepts into understandable learning tracks.</p>
-        </div>
-
-        <div class="t-item">
-          <div class="t-date">NOV 2025 — MAR 2026</div>
-          <h4>NSS Volunteer</h4>
-          <div class="org">National Service Scheme · Jaipur</div>
-          <p>Engaging in community-focused welfare activities, building teamwork, and leading awareness initiatives under the NSS motto: "Not Me, But You."</p>
-        </div>
-
-        <div class="t-item">
-          <div class="t-date">SEP 2024</div>
-          <h4>Smart India Hackathon Participant</h4>
-          <div class="org">Ministry of Education · Jaipur</div>
-          <p>Collaborated inside a 6-person student cluster representing JECRC University to build and deploy web solutions within a fast-paced 36-hour schedule.</p>
-        </div>
-
-        <div class="t-item">
-          <div class="t-date">2024 — 2027</div>
-          <h4>Bachelor of Computer Applications (BCA)</h4>
-          <div class="org">JECRC University · Jaipur</div>
-          <p>Focusing on computer systems, web application design, database engineering, and core networking fundamentals.</p>
-        </div>
-
-        <div class="t-item">
-          <div class="t-date">2023 — 2024</div>
-          <h4>Competitive Prep Track</h4>
-          <div class="org">Physics Wallah · NEET Prep</div>
-          <p>Rigorous test prep training, establishing intense problem-solving methods and structural discipline.</p>
-        </div>
-
-        <div class="t-item">
-          <div class="t-date">2022 — 2023</div>
-          <h4>Competitive Prep Track</h4>
-          <div class="org">Aakash Institute · NEET Prep</div>
-          <p>Early structural reasoning and conceptual logic design inside physical sciences.</p>
-        </div>
-
-        <div class="t-item">
-          <div class="t-date">2016 — 2022</div>
-          <h4>Senior Secondary Schooling</h4>
-          <div class="org">Manglam Vidhyapeeth School · Jaipur</div>
-          <p>Completed higher secondary education focusing on biology, physics, and chemistry logical concepts.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Certifications -->
-  <section id="certifications">
-    <div class="wrap reveal">
-      <div class="eyebrow">verifications</div>
-      <h2 class="section-title">Verified credentials.</h2>
-      <p class="section-sub">Standard security and architecture certifications completed successfully.</p>
-      
-      <div class="cert-grid">
-        <div class="cert-card">
-          <div class="cert-icon">🛡️</div>
-          <div>
-            <h4>Certified Security Analyst</h4>
-            <span>CSA Fundamentals</span>
-          </div>
-        </div>
-        
-        <div class="cert-card">
-          <div class="cert-icon">☕</div>
-          <div>
-            <h4>Java Bootcamp</h4>
-            <span>Core Software Engineering</span>
-          </div>
-        </div>
-        
-        <div class="cert-card">
-          <div class="cert-icon">🔧</div>
-          <div>
-            <h4>Git & GitHub Certification</h4>
-            <span>SCM Workflows</span>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-icon">🔐</div>
-          <div>
-            <h4>Secure Computer User</h4>
-            <span>EC-Council (CSCU)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Resume Section -->
-  <section id="resume">
-    <div class="wrap reveal">
-      <div class="eyebrow">telemetry output</div>
-      <h2 class="section-title">Export systems.</h2>
-      <div class="card resume-box">
-        <div>
-          <h3>Rishabh Agarwal — Resume</h3>
-          <p>Exportable, one-page ATS-formatted documentation optimized for cloud systems roles.</p>
-        </div>
-        <a href="Resume.pdf" download class="btn btn-primary">⬇ Download PDF File</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SSH dispatch (Contact Form) -->
-  <section id="contact" style="background:var(--card-2);">
-    <div class="wrap reveal">
-      <div class="eyebrow">comms dispatcher</div>
-      <h2 class="section-title">Open connection.</h2>
-      <p class="section-sub">Send a message packet over SMTP fallback logic. Average latency: 200ms.</p>
-      
-      <div class="contact-grid">
-        <form class="card" id="contactForm" onsubmit="return handleSubmit(event)">
-          <div class="field">
-            <label>dispatch-source (Name)</label>
-            <input type="text" required placeholder="Guest user name">
-          </div>
-          <div class="field">
-            <label>reply-route (Email)</label>
-            <input type="email" required placeholder="user@domain.com">
-          </div>
-          <div class="field">
-            <label>packet-header (Subject)</label>
-            <input type="text" required placeholder="Subject context">
-          </div>
-          <div class="field">
-            <label>payload (Message)</label>
-            <textarea rows="4" required placeholder="System log text details..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">⚡ Dispatch Packet</button>
-          <p id="formNote" style="font-size:12.5px;color:var(--text-dim);margin-top:12px;font-family:var(--mono)"></p>
-        </form>
-        
-        <div class="contact-info">
-          <div class="ci-item">
-            <div class="ico">📧</div>
-            <div>
-              <h5>EMAIL_ADDR</h5>
-              <span><a href="mailto:rishabhgupta3451@gmail.com">rishabhgupta3451@gmail.com</a></span>
-            </div>
-          </div>
-          
-          <div class="ci-item">
-            <div class="ico">📱</div>
-            <div>
-              <h5>TEL_PHONE</h5>
-              <span><a href="tel:+918302100635">+91 83021 00635</a></span>
-            </div>
-          </div>
-
-          <div class="ci-item">
-            <div class="ico">📍</div>
-            <div>
-              <h5>LOC_COORD</h5>
-              <span>Jaipur, Rajasthan, India</span>
-            </div>
-          </div>
-
-          <div class="ci-item">
-            <div class="ico">💼</div>
-            <div>
-              <h5>LINKEDIN_URL</h5>
-              <!-- Corrected URL to contain the hyphen -->
-              <span><a href="https://www.linkedin.com/in/rishabh-agarwal-a70384321" target="_blank">linkedin.com/in/rishabh-agarwal-a70384321</a></span>
-            </div>
-          </div>
-
-          <div class="ci-item">
-            <div class="ico">🐙</div>
-            <div>
-              <h5>GITHUB_USER</h5>
-              <span><a href="https://github.com/rishabh506" target="_blank">github.com/rishabh506</a></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="wrap foot-grid">
-      <div class="logo"><span class="dot"></span> rishabh<span style="color:var(--text-dim)">.infra</span></div>
-      <div class="foot-links">
+  <header class="nav" id="nav">
+    <div class="wrap nav-in">
+      <a class="mark" href="#home" aria-label="Rishabh Agarwal, home">rishabh<span>.</span>dev</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open navigation">
+        <i data-lucide="menu" aria-hidden="true"></i>
+      </button>
+      <nav class="menu" id="menu" aria-label="Primary navigation">
         <a href="#about">About</a>
-        <a href="#projects">Deployments</a>
-        <a href="#experience">Timeline</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
-      </div>
-      <div class="foot-social">
-        <a class="icon-link" href="mailto:rishabhgupta3451@gmail.com" title="Email Address">📧</a>
-        <!-- Corrected LinkedIn Link -->
-        <a class="icon-link" href="https://www.linkedin.com/in/rishabh-agarwal-a70384321" target="_blank" title="LinkedIn Profile">💼</a>
-        <a class="icon-link" href="https://github.com/rishabh506" target="_blank" title="GitHub Account">🐙</a>
-      </div>
+        <a class="nav-resume" href="assets/resume.pdf" download>Resume <i data-lucide="arrow-down-to-line" aria-hidden="true"></i></a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" aria-pressed="false" title="Switch to light theme">
+          <i data-lucide="sun" aria-hidden="true"></i><span>Theme</span>
+        </button>
+      </nav>
     </div>
-    <div class="wrap" style="margin-top:20px;">
-      <span class="copy">© 2026 Rishabh Agarwal. Compiled using semantic grid architecture and vanilla scripts.</span>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="availability-dot" aria-hidden="true"></span> OPEN TO INTERNSHIPS &amp; ENTRY-LEVEL ROLES</p>
+          <h1>Building useful things, <span>one project at a time.</span></h1>
+          <p class="hero-name">I'm Rishabh Agarwal.</p>
+          <p class="lead">BCA student focused on web development and cloud computing at JECRC University, Jaipur.</p>
+          <p class="sub">I enjoy turning ideas into practical applications and learning how software is built, automated, and delivered.</p>
+          <div class="cta">
+            <a class="btn" href="#projects">View projects <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+            <a class="btn btn-ghost" href="assets/resume.pdf" download><i data-lucide="download" aria-hidden="true"></i> Download resume</a>
+          </div>
+          <div class="socials" aria-label="Social links">
+            <a href="https://github.com/rishabh506" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/rishabh-agarwal-a70384321/?skipRedirect=true" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" aria-hidden="true"></i> LinkedIn</a>
+            <a href="https://www.kaggle.com/rishabhagarwal997889" target="_blank" rel="noopener noreferrer"><i data-lucide="chart-no-axes-column" aria-hidden="true"></i> Kaggle</a>
+            <a href="https://leetcode.com/u/rishabh50666/" target="_blank" rel="noopener noreferrer"><i data-lucide="code-2" aria-hidden="true"></i> LeetCode</a>
+            <a href="https://www.hackerrank.com/profile/rishabhgupta3451" target="_blank" rel="noopener noreferrer"><i data-lucide="terminal" aria-hidden="true"></i> HackerRank</a>
+            <span><i data-lucide="map-pin" aria-hidden="true"></i> Jaipur, India</span>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Current focus">
+          <div class="hero-card-top"><span>MY CURRENT FOCUS</span><i data-lucide="sparkles" aria-hidden="true"></i></div>
+          <p class="hero-card-title">Learning by<br>building and shipping.</p>
+          <ul class="focus-list">
+            <li><span class="focus-icon"><i data-lucide="panels-top-left" aria-hidden="true"></i></span><span><strong>Web development</strong><small>Interfaces &amp; applications</small></span></li>
+            <li><span class="focus-icon"><i data-lucide="cloud" aria-hidden="true"></i></span><span><strong>Cloud &amp; DevOps</strong><small>Docker, automation &amp; CI/CD</small></span></li>
+            <li><span class="focus-icon"><i data-lucide="database" aria-hidden="true"></i></span><span><strong>Backend &amp; data</strong><small>Python, databases &amp; analytics</small></span></li>
+          </ul>
+          <div class="hero-card-foot"><span>BCA · CLOUD COMPUTING</span><span>JECRC UNIVERSITY</span></div>
+        </aside>
+      </div>
+      <a class="scroll-cue" href="#about"><span></span> A little more about me</a>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap about-grid">
+        <div class="section-heading">
+          <p class="eyebrow">A QUICK INTRODUCTION</p>
+          <h2>Curious about how<br>good software <span>gets made.</span></h2>
+        </div>
+        <div class="about-copy">
+          <p>I'm pursuing a Bachelor of Computer Applications at JECRC University, specializing in Cloud Computing and Web Development. I like working across the stack—from shaping a clear interface to understanding the systems behind it.</p>
+          <p>During my DevOps internship at ElevateLab, I gained practical exposure to Docker, containerization, automation, and CI/CD pipelines. I have also built projects using Node.js with Currency and Joke APIs, along with a full-stack project integrating AI.</p>
+          <p>Outside of academics, I served as a team head in the JECRC University Student Council management team, leading more than 80 students. That experience strengthened my teamwork, communication, leadership, and organization.</p>
+          <div class="education-card">
+            <span class="education-icon"><i data-lucide="graduation-cap" aria-hidden="true"></i></span>
+            <div><strong>Bachelor of Computer Applications</strong><p>JECRC University · Jaipur, Rajasthan</p></div>
+            <span class="education-date">Expected 2027</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="capabilities">
+      <div class="wrap">
+        <div class="section-intro">
+          <div><p class="eyebrow">HOW I CAN CONTRIBUTE</p><h2>Areas I'm building in.</h2></div>
+          <p>Hands-on learning through coursework, personal projects, and internship exposure.</p>
+        </div>
+        <div class="capability-grid" id="roleGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section-intro">
+          <div><p class="eyebrow">SELECTED WORK</p><h2>Projects with a purpose.</h2></div>
+          <p>Selected builds that show how I approach problem-solving, application development, and practical tools.</p>
+        </div>
+        <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+        <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="skills">
+      <div class="wrap">
+        <div class="section-intro">
+          <div><p class="eyebrow">TOOLS &amp; TECHNOLOGIES</p><h2>What I'm learning with.</h2></div>
+          <p>Grouped by area. These reflect my current studies, project work, and hands-on exposure—not years of professional experience.</p>
+        </div>
+        <div class="skills-grid" id="skillGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="wrap experience-grid">
+        <div class="section-heading">
+          <p class="eyebrow">THE PATH SO FAR</p>
+          <h2>Experience &amp;<br><span>education.</span></h2>
+          <p class="section-note">Practical exposure and learning milestones.</p>
+        </div>
+        <div>
+          <ol class="timeline" id="timeline"></ol>
+          <div class="achievement">
+            <span class="achievement-icon"><i data-lucide="trophy" aria-hidden="true"></i></span>
+            <div><p class="eyebrow">HIGHLIGHT</p><h3>Smart India Hackathon</h3><p>Represented JECRC University as part of a student team.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow">HAVE AN OPPORTUNITY IN MIND?</p>
+          <h2>Let's start a<br><span>conversation.</span></h2>
+          <p class="contact-intro">I'm open to internships, entry-level opportunities, and relevant projects. If you're hiring or would like to discuss an opportunity, I'd be happy to connect.</p>
+          <a class="email-link" href="mailto:rishabhgupta3451@gmail.com"><i data-lucide="mail" aria-hidden="true"></i> rishabhgupta3451@gmail.com</a>
+          <div class="contact-socials">
+            <a href="https://github.com/rishabh506" target="_blank" rel="noopener noreferrer">GitHub <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/rishabh-agarwal-a70384321/?skipRedirect=true" target="_blank" rel="noopener noreferrer">LinkedIn <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <span class="contact-card-icon"><i data-lucide="send" aria-hidden="true"></i></span>
+          <p class="eyebrow">EMAIL WORKS BEST</p>
+          <h3>Tell me what you're looking for.</h3>
+          <p class="contact-card-copy">Start a conversation about a role, project, or idea. The link opens a new email in your mail app.</p>
+          <a class="btn" href="mailto:rishabhgupta3451@gmail.com?subject=Portfolio%20inquiry">Start an email <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <a class="mark" href="#home">rishabh<span>.</span>dev</a>
+      <div class="footer-socials">
+        <a href="https://github.com/rishabh506" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/rishabh-agarwal-a70384321/?skipRedirect=true" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" aria-hidden="true"></i> LinkedIn</a>
+        <a href="https://www.kaggle.com/rishabhagarwal997889" target="_blank" rel="noopener noreferrer"><i data-lucide="chart-no-axes-column" aria-hidden="true"></i> Kaggle</a>
+        <a href="https://leetcode.com/u/rishabh50666/" target="_blank" rel="noopener noreferrer"><i data-lucide="code-2" aria-hidden="true"></i> LeetCode</a>
+        <a href="https://www.hackerrank.com/profile/rishabhgupta3451" target="_blank" rel="noopener noreferrer"><i data-lucide="terminal" aria-hidden="true"></i> HackerRank</a>
+      </div>
+      <p>Built with care. © <span id="year"></span> Rishabh Agarwal</p>
+      <a class="back-top" href="#home">Back to top <i data-lucide="arrow-up" aria-hidden="true"></i></a>
     </div>
   </footer>
 
-  <!-- Back to top button -->
-  <button id="toTop" title="Scroll back to top">↑</button>
-
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
