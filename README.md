@@ -2,7 +2,7 @@
 
 A personal portfolio for my BCA studies, project work, and interests in cloud computing, DevOps, and software development.
 
-**Live portfolio:** [portfolio-me-lac-eta.vercel.app](https://portfolio-me-lac-eta.vercel.app/)
+**Live portfolio:** [rishabh-506.vercel.app]((https://rishabh-506.vercel.app))
 
 ## Featured work
 
