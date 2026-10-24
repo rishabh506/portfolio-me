@@ -7,12 +7,12 @@ A personal portfolio for my BCA studies, project work, and interests in cloud co
 ## Featured work
 
 - [Indian Meal Planner](https://github.com/rishabh506/Indian-meal-planner) — Python and Streamlit app for meal planning, pantry checks, and cost and nutrition estimates.
-- [Bubble Game](https://github.com/rishabh506/bubble-game-copy) — a timed number-matching game using HTML, CSS, and JavaScript.
+- [CI/CD Pipeline Project](https://github.com/rishabh506/cicd-pipeline-project) — Flask API project with a GitHub Actions workflow for tests, Docker image builds, and image publishing.
 - [Amazon UI Clone](https://github.com/rishabh506/ecommerce_amazon) — a static shopping-homepage recreation using HTML and CSS.
-- [Reelcast](https://github.com/rishabh506/video-streaming-platform) — a full-stack video-streaming project.
+- [Bubble Game](https://github.com/rishabh506/bubble-game-copy) — a timed number-matching game using HTML, CSS, and JavaScript.
 - [Portfolio source](https://github.com/rishabh506/portfolio-me) — this responsive static site.
 
-The site links to each project's repository and, where listed, its demo. Project descriptions distinguish learning exercises from functional applications.
+The site links to each project's repository and, where listed, its demo or workflow run. Project descriptions distinguish learning exercises from functional applications.
 
 ## About
 

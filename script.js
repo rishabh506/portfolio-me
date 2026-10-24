@@ -1,32 +1,40 @@
 const projects = [
   {
     name: "Indian Meal Planner",
-    category: "Python",
-    preview: "meal",
+    category: "Python & Streamlit",
+    image: "assets/project-previews/meal-planner-dashboard.jpg",
+    imageWidth: 1140,
+    imageHeight: 690,
+    imageAlt: "Screenshot of the Indian Meal Planner's live dashboard with recipe and cost-distribution charts.",
     purpose: "A Streamlit app for planning meals around dietary preferences, prep time, and budget, with pantry checks and shopping-list support.",
-    implementation: "Uses CSV-based recipe, price, and pantry data for recipe filtering, meal-plan generation, ingredient-cost estimates, and nutritional estimates.",
-    learning: "Working through data handling, filtering rules, and connecting planning features into a single app.",
+    implementation: "Uses CSV-based recipe, price, and pantry data to filter recipes, generate meal plans, and estimate ingredient costs and nutrition.",
+    learning: "Practised working with tabular data, filtering rules, and connecting planning features in one app.",
     technologies: ["Python", "Streamlit", "Pandas"],
     live: "https://indian-meal-planner-v4bngfmmlhpywp3rmarfyc.streamlit.app/",
     repository: "https://github.com/rishabh506/Indian-meal-planner",
     featured: true
   },
   {
-    name: "Bubble Game",
-    category: "JavaScript",
-    preview: "bubble",
-    purpose: "A timed number-matching browser game: find the target number among the bubbles before the 30-second round ends.",
-    implementation: "A delegated click handler checks the selected number, updates the score for a match, and ends the round on a miss.",
-    learning: "Practised DOM events, game state, score updates, random targets, and a countdown timer.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    live: "https://bubble-game-copy.vercel.app/",
-    repository: "https://github.com/rishabh506/bubble-game-copy"
+    name: "CI/CD Pipeline Project",
+    category: "Cloud & DevOps",
+    image: "assets/project-previews/ci-cd-pipeline.jpg",
+    imageWidth: 1367,
+    imageHeight: 900,
+    imageAlt: "GitHub Actions screenshot showing a successful build-and-test run for the CI/CD pipeline project.",
+    purpose: "A Flask API project used to practise containerized testing and delivery with GitHub Actions; no public app demo is listed.",
+    implementation: "The workflow runs tests and builds a Docker image; push-triggered runs can publish it to Docker Hub when credentials are configured. The repository also includes deployment and health-check scripts.",
+    learning: "Practised connecting automated tests, image builds, and deployment steps in a CI/CD workflow.",
+    technologies: ["Python", "Flask", "pytest", "Docker", "GitHub Actions"],
+    workflow: "https://github.com/rishabh506/cicd-pipeline-project/actions/runs/31328384659",
+    repository: "https://github.com/rishabh506/cicd-pipeline-project",
+    featured: true
   },
   {
     name: "Amazon UI Clone",
     category: "HTML & CSS",
-    preview: "image",
     image: "assets/project-previews/amazon-ui-clone.jpg",
+    imageWidth: 1440,
+    imageHeight: 626,
     imageAlt: "Screenshot of the Amazon UI Clone home page, including its banner and product category sections.",
     purpose: "A static shopping-homepage recreation made as an early exercise in web development.",
     implementation: "Builds the page layout, navigation, hero banner, and category sections with HTML and CSS; it does not implement shopping interactions.",
@@ -36,41 +44,41 @@ const projects = [
     repository: "https://github.com/rishabh506/ecommerce_amazon"
   },
   {
-    name: "Personal Portfolio",
-    category: "Web",
-    preview: "portfolio",
-    purpose: "A personal site for introducing my interests, sharing selected projects, and making it easy to get in touch.",
-    implementation: "A responsive static site using semantic HTML, CSS, and vanilla JavaScript for project filters, theme preference, and mobile navigation.",
-    learning: "Bringing content, accessibility, responsive styling, and small interface behaviors together without a framework.",
+    name: "Bubble Game",
+    category: "JavaScript",
+    image: "assets/project-previews/bubble-game.jpg",
+    imageWidth: 790,
+    imageHeight: 603,
+    imageAlt: "Screenshot of the Bubble Game showing the target number, timer, score, and numbered bubbles.",
+    purpose: "A timed number-matching browser game: find the target number among the bubbles before the 30-second round ends.",
+    implementation: "A delegated click handler checks the selected number, updates the score for a match, and ends the round on a miss.",
+    learning: "Practised DOM events, game state, score updates, random targets, and a countdown timer.",
     technologies: ["HTML", "CSS", "JavaScript"],
-    live: "https://portfolio-me-lac-eta.vercel.app/",
-    repository: "https://github.com/rishabh506/portfolio-me"
-  },
-  {
-    name: "Reelcast",
-    category: "Full stack",
-    preview: "stream",
-    purpose: "A full-stack video-streaming project exploring video upload and playback alongside watch parties.",
-    implementation: "The repository includes a React and TypeScript client, an Express API, and a worker-based video-processing setup, with PostgreSQL, Redis, and S3 integrations.",
-    learning: "Exploring how a web client, API, background processing, and third-party services fit into one larger application.",
-    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "FFmpeg", "AWS S3"],
-    live: "https://video-streaming-platform-theta-gilt.vercel.app/",
-    repository: "https://github.com/rishabh506/video-streaming-platform"
+    live: "https://bubble-game-copy.vercel.app/",
+    repository: "https://github.com/rishabh506/bubble-game-copy"
   }
 ];
 
 const skills = [
   {
-    category: "Used in projects",
-    items: ["Python", "JavaScript", "HTML", "CSS", "Streamlit", "Pandas"]
+    category: "Programming",
+    items: ["JavaScript", "Java", "Python (beginner)", "C", "C++"]
   },
   {
-    category: "Project and coursework exposure",
-    items: ["React", "TypeScript", "Node.js", "Java", "C", "C++", "SQL", "PostgreSQL"]
+    category: "Frontend",
+    items: ["HTML", "CSS", "React", "Tailwind CSS", "Bootstrap"]
+  },
+  {
+    category: "Backend & Databases",
+    items: ["Node.js", "Express.js", "REST APIs", "SQL", "PostgreSQL", "MongoDB", "Oracle"]
   },
   {
     category: "Cloud & DevOps",
-    items: ["Docker", "CI/CD", "Automation", "AWS fundamentals", "Git", "GitHub"]
+    items: ["AWS fundamentals", "Docker", "CI/CD", "Automation"]
+  },
+  {
+    category: "Tools",
+    items: ["Git", "GitHub", "VS Code", "Vercel", "Render"]
   }
 ];
 
@@ -84,11 +92,6 @@ const timeline = [
     label: "EDUCATION · EXPECTED 2027",
     title: "BCA, Cloud Computing · JECRC University",
     description: "Bachelor of Computer Applications, Jaipur, Rajasthan."
-  },
-  {
-    label: "LEADERSHIP",
-    title: "Team head · JECRC University Student Council",
-    description: "Served on the Student Council management team."
   }
 ];
 
@@ -102,60 +105,14 @@ const make = (tag, className, text) => {
 
 let activeFilter = "All";
 
-function createPreview(type) {
-  const preview = make("div", `project-preview preview-${type}`);
-  preview.setAttribute("aria-hidden", "true");
-
-  if (type === "meal") {
-    preview.append(make("span", "preview-kicker", "MEAL PLANNER"));
-    preview.append(make("span", "preview-heading", "A plan that fits your week."));
-    const tabs = make("div", "meal-tabs");
-    ["Recipes", "Meal plan", "Pantry"].forEach(label => tabs.append(make("span", "", label)));
-    preview.append(tabs);
-    return preview;
-  }
-
-  if (type === "bubble") {
-    const gameBar = make("div", "game-bar");
-    [["HIT", "—"], ["TIME", "30"], ["SCORE", "0"]].forEach(([label, value]) => {
-      const stat = make("span", "game-stat");
-      stat.append(make("small", "", label), make("strong", "", value));
-      gameBar.append(stat);
-    });
-    preview.append(gameBar);
-    const bubbles = make("div", "game-bubbles");
-    ["2", "7", "4", "1", "8", "3", "6", "9", "5"].forEach(number => bubbles.append(make("span", "game-bubble", number)));
-    preview.append(bubbles);
-    return preview;
-  }
-
-  if (type === "portfolio") {
-    preview.append(make("span", "mini-brand", "rishabh.dev"));
-    preview.append(make("span", "mini-portfolio-label", "A developer in progress."));
-    preview.append(make("span", "mini-portfolio-line", "Cloud · DevOps · Backend"));
-    return preview;
-  }
-
-  const player = make("div", "stream-player");
-  player.append(make("span", "play-symbol", "▶"), make("span", "player-label", "VIDEO LIBRARY"));
-  preview.append(player);
-  preview.append(make("span", "stream-caption", "A study in video, systems, and shared playback."));
-  return preview;
-}
-
 function createProjectCard(project) {
   const card = make("article", `project-card${project.featured ? " project-card-featured" : ""}`);
-  const visual = project.image
-    ? make("img", "project-image")
-    : createPreview(project.preview);
-
-  if (project.image) {
-    visual.src = project.image;
-    visual.alt = project.imageAlt;
-    visual.loading = "lazy";
-    visual.width = 1440;
-    visual.height = 626;
-  }
+  const visual = make("img", "project-image");
+  visual.src = project.image;
+  visual.alt = project.imageAlt;
+  visual.loading = "lazy";
+  visual.width = project.imageWidth;
+  visual.height = project.imageHeight;
 
   const content = make("div", "project-content");
   const meta = make("div", "project-meta");
@@ -175,6 +132,7 @@ function createProjectCard(project) {
 
   const links = make("div", "project-links");
   if (project.live) addProjectLink(links, project.live, "Live demo");
+  if (project.workflow) addProjectLink(links, project.workflow, "Workflow run");
   addProjectLink(links, project.repository, "GitHub");
   content.append(links);
   card.append(visual, content);
