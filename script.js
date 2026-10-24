@@ -1,252 +1,244 @@
-const roles = [
-  {
-    icon: "panels-top-left",
-    title: "Frontend development",
-    filter: "Frontend",
-    text: "Building responsive interfaces and learning to turn product ideas into clear, usable web experiences.",
-    skills: ["HTML", "CSS", "JavaScript", "React"]
-  },
-  {
-    icon: "server",
-    title: "Backend / Software Development",
-    filter: "Backend & Software",
-    text: "Developing application logic, working with databases, and learning to build reliable APIs and software systems.",
-    skills: ["Java", "Python", "SQL", "REST API concepts"]
-  },
-  {
-    icon: "cloud",
-    title: "Cloud / DevOps",
-    filter: "Cloud & DevOps",
-    text: "Exploring cloud infrastructure, containerization, automation, and CI/CD workflows.",
-    skills: ["AWS", "Docker", "Git", "CI/CD", "Linux basics"]
-  },
-  {
-    icon: "chart-no-axes-combined",
-    title: "Data analytics",
-    filter: "Data & Analytics",
-    text: "Working with structured data and Python tools to explore useful patterns and insights.",
-    skills: ["Python", "Pandas", "NumPy", "SQL"]
-  }
-];
-
 const projects = [
   {
-    name: "Reelcast · Video Streaming Platform",
-    visual: "streaming",
-    mark: "Reelcast",
-    caption: "Adaptive streaming · watch parties",
-    status: "Major project",
-    purpose: "A full-stack video platform for adaptive streaming, synchronized watch parties, and subscription-based premium content.",
-    tech: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Redis", "FFmpeg", "Socket.io", "AWS S3", "Stripe"],
-    categories: ["Frontend", "Backend & Software", "Cloud & DevOps"],
-    live: "https://video-streaming-platform-theta-gilt.vercel.app/",
-    code: "https://github.com/rishabh506/video-streaming-platform",
-    highlights: ["Background FFmpeg transcoding to adaptive HLS video qualities", "Real-time watch parties with synchronized playback and chat", "JWT authentication and Stripe subscription billing"]
-  },
-  {
-    name: "Tic-Tac-Toe",
-    visual: "tictactoe",
-    mark: "Tic-Tac-Toe",
-    caption: "Play against a minimax AI",
-    status: "Featured project",
-    purpose: "A framework-free game with a computer opponent powered by a minimax decision tree.",
-    tech: ["JavaScript", "HTML", "CSS", "Minimax AI"],
-    categories: ["Frontend"],
-    code: "https://github.com/rishabh506/tic-tak-toe",
-    highlights: ["Three AI difficulty levels and accessible keyboard interaction", "Persistent scores, dark/light themes, and synthesized audio"]
-  },
-  {
     name: "Indian Meal Planner",
-    visual: "meal",
-    mark: "Indian Meal Planner",
-    caption: "Planning · pantry · cost",
-    purpose: "A meal-planning app focused on Indian meals, pantry management, and cost optimization in INR.",
-    tech: ["Python", "Streamlit"],
-    categories: ["Backend", "Data & Analytics"],
+    category: "Python",
+    preview: "meal",
+    purpose: "A Streamlit app for planning meals around dietary preferences, prep time, and budget, with pantry checks and shopping-list support.",
+    implementation: "Uses CSV-based recipe, price, and pantry data for recipe filtering, meal-plan generation, ingredient-cost estimates, and nutritional estimates.",
+    learning: "Working through data handling, filtering rules, and connecting planning features into a single app.",
+    technologies: ["Python", "Streamlit", "Pandas"],
     live: "https://indian-meal-planner-v4bngfmmlhpywp3rmarfyc.streamlit.app/",
-    code: "https://github.com/rishabh506/Indian-meal-planner",
-    highlights: ["Plan meals and manage pantry items", "Explore cost-conscious meal planning"]
+    repository: "https://github.com/rishabh506/Indian-meal-planner",
+    featured: true
   },
   {
     name: "Bubble Game",
-    visual: "game",
-    mark: "Bubble Game",
-    caption: "A small browser game",
-    purpose: "A browser-based game built to practise interaction and event handling with vanilla JavaScript.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    categories: ["Frontend"],
+    category: "JavaScript",
+    preview: "bubble",
+    purpose: "A timed number-matching browser game: find the target number among the bubbles before the 30-second round ends.",
+    implementation: "A delegated click handler checks the selected number, updates the score for a match, and ends the round on a miss.",
+    learning: "Practised DOM events, game state, score updates, random targets, and a countdown timer.",
+    technologies: ["HTML", "CSS", "JavaScript"],
     live: "https://bubble-game-copy.vercel.app/",
-    code: "https://github.com/rishabh506/bubble-game-copy",
-    highlights: ["Click-based gameplay"]
+    repository: "https://github.com/rishabh506/bubble-game-copy"
   },
   {
     name: "Amazon UI Clone",
-    visual: "shop",
-    mark: "Amazon UI Clone",
-    caption: "First web project",
-    purpose: "An educational shopping-site interface recreation made while learning core web development.",
-    tech: ["HTML", "CSS"],
-    categories: ["Frontend"],
+    category: "HTML & CSS",
+    preview: "image",
+    image: "assets/project-previews/amazon-ui-clone.jpg",
+    imageAlt: "Screenshot of the Amazon UI Clone home page, including its banner and product category sections.",
+    purpose: "A static shopping-homepage recreation made as an early exercise in web development.",
+    implementation: "Builds the page layout, navigation, hero banner, and category sections with HTML and CSS; it does not implement shopping interactions.",
+    learning: "Practised structuring a multi-section page and styling layouts with core web technologies.",
+    technologies: ["HTML", "CSS"],
     live: "https://ecommerce-amazon-gamma.vercel.app/",
-    code: "https://github.com/rishabh506/ecommerce_amazon",
-    highlights: ["Practice with page structure and styling"]
+    repository: "https://github.com/rishabh506/ecommerce_amazon"
+  },
+  {
+    name: "Personal Portfolio",
+    category: "Web",
+    preview: "portfolio",
+    purpose: "A personal site for introducing my interests, sharing selected projects, and making it easy to get in touch.",
+    implementation: "A responsive static site using semantic HTML, CSS, and vanilla JavaScript for project filters, theme preference, and mobile navigation.",
+    learning: "Bringing content, accessibility, responsive styling, and small interface behaviors together without a framework.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    live: "https://portfolio-me-lac-eta.vercel.app/",
+    repository: "https://github.com/rishabh506/portfolio-me"
+  },
+  {
+    name: "Reelcast",
+    category: "Full stack",
+    preview: "stream",
+    purpose: "A full-stack video-streaming project exploring video upload and playback alongside watch parties.",
+    implementation: "The repository includes a React and TypeScript client, an Express API, and a worker-based video-processing setup, with PostgreSQL, Redis, and S3 integrations.",
+    learning: "Exploring how a web client, API, background processing, and third-party services fit into one larger application.",
+    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "FFmpeg", "AWS S3"],
+    live: "https://video-streaming-platform-theta-gilt.vercel.app/",
+    repository: "https://github.com/rishabh506/video-streaming-platform"
   }
 ];
 
-const skills = {
-  "Frontend": ["HTML", "CSS", "JavaScript", "React", "Vite", "Tailwind CSS", "Bootstrap"],
-  "Programming": ["Python", "Java", "C", "C++"],
-  "Backend & Databases": ["SQL", "Oracle Database", "MongoDB", "Node.js fundamentals", "REST API concepts"],
-  "Cloud & DevOps": ["AWS fundamentals", "Docker", "CI/CD", "Automation", "Git", "GitHub", "Linux fundamentals"],
-  "Data analytics": ["Pandas", "NumPy", "Matplotlib", "SQL querying", "Data visualization basics"],
-  "Tools": ["VS Code", "Streamlit"]
-};
+const skills = [
+  {
+    category: "Used in projects",
+    items: ["Python", "JavaScript", "HTML", "CSS", "Streamlit", "Pandas"]
+  },
+  {
+    category: "Project and coursework exposure",
+    items: ["React", "TypeScript", "Node.js", "Java", "C", "C++", "SQL", "PostgreSQL"]
+  },
+  {
+    category: "Cloud & DevOps",
+    items: ["Docker", "CI/CD", "Automation", "AWS fundamentals", "Git", "GitHub"]
+  }
+];
 
 const timeline = [
   {
-    date: "Internship",
-    title: "ElevateLab",
-    text: "Gained practical exposure to Docker, CI/CD pipelines, automation, and containerization."
+    label: "INTERNSHIP",
+    title: "DevOps Intern · ElevateLab",
+    description: "Gained practical exposure to Docker, containerization, automation, and CI/CD pipelines."
   },
   {
-    date: "Expected 2027",
-    title: "BCA, JECRC University",
-    text: "Studying Cloud Computing and Web Development in Jaipur, Rajasthan."
+    label: "EDUCATION · EXPECTED 2027",
+    title: "BCA, Cloud Computing · JECRC University",
+    description: "Bachelor of Computer Applications, Jaipur, Rajasthan."
+  },
+  {
+    label: "LEADERSHIP",
+    title: "Team head · JECRC University Student Council",
+    description: "Served on the Student Council management team."
   }
 ];
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const make = (tag, className, text) => {
-  const node = document.createElement(tag);
-  if (className) node.className = className;
-  if (text) node.textContent = text;
-  return node;
+  const element = document.createElement(tag);
+  if (className) element.className = className;
+  if (text) element.textContent = text;
+  return element;
 };
 
 let activeFilter = "All";
 
-function renderRoles() {
-  const grid = $("#roleGrid");
-  roles.forEach(role => {
-    const card = make("article", "capability");
-    const icon = make("span", "capability-icon");
-    icon.innerHTML = `<i data-lucide="${role.icon}" aria-hidden="true"></i>`;
-    card.append(icon, make("h3", "", role.title), make("p", "", role.text));
+function createPreview(type) {
+  const preview = make("div", `project-preview preview-${type}`);
+  preview.setAttribute("aria-hidden", "true");
 
-    const tags = make("ul", "tag-list");
-    role.skills.forEach(skill => tags.append(make("li", "", skill)));
-    card.append(tags);
+  if (type === "meal") {
+    preview.append(make("span", "preview-kicker", "MEAL PLANNER"));
+    preview.append(make("span", "preview-heading", "A plan that fits your week."));
+    const tabs = make("div", "meal-tabs");
+    ["Recipes", "Meal plan", "Pantry"].forEach(label => tabs.append(make("span", "", label)));
+    preview.append(tabs);
+    return preview;
+  }
 
-    const button = make("button", "", `Explore ${role.title.toLowerCase()} projects`);
-    button.type = "button";
-    button.addEventListener("click", () => {
-      setFilter(role.filter);
-      $("#projects").scrollIntoView({ behavior: "smooth" });
+  if (type === "bubble") {
+    const gameBar = make("div", "game-bar");
+    [["HIT", "—"], ["TIME", "30"], ["SCORE", "0"]].forEach(([label, value]) => {
+      const stat = make("span", "game-stat");
+      stat.append(make("small", "", label), make("strong", "", value));
+      gameBar.append(stat);
     });
-    card.append(button);
-    grid.append(card);
-  });
+    preview.append(gameBar);
+    const bubbles = make("div", "game-bubbles");
+    ["2", "7", "4", "1", "8", "3", "6", "9", "5"].forEach(number => bubbles.append(make("span", "game-bubble", number)));
+    preview.append(bubbles);
+    return preview;
+  }
+
+  if (type === "portfolio") {
+    preview.append(make("span", "mini-brand", "rishabh.dev"));
+    preview.append(make("span", "mini-portfolio-label", "A developer in progress."));
+    preview.append(make("span", "mini-portfolio-line", "Cloud · DevOps · Backend"));
+    return preview;
+  }
+
+  const player = make("div", "stream-player");
+  player.append(make("span", "play-symbol", "▶"), make("span", "player-label", "VIDEO LIBRARY"));
+  preview.append(player);
+  preview.append(make("span", "stream-caption", "A study in video, systems, and shared playback."));
+  return preview;
+}
+
+function createProjectCard(project) {
+  const card = make("article", `project-card${project.featured ? " project-card-featured" : ""}`);
+  const visual = project.image
+    ? make("img", "project-image")
+    : createPreview(project.preview);
+
+  if (project.image) {
+    visual.src = project.image;
+    visual.alt = project.imageAlt;
+    visual.loading = "lazy";
+    visual.width = 1440;
+    visual.height = 626;
+  }
+
+  const content = make("div", "project-content");
+  const meta = make("div", "project-meta");
+  meta.append(make("span", "project-number", String(projects.indexOf(project) + 1).padStart(2, "0")));
+  meta.append(make("span", "project-category", project.category));
+  content.append(meta, make("h3", "", project.name));
+  content.append(make("p", "project-purpose", project.purpose));
+
+  const details = make("dl", "project-details");
+  details.append(make("dt", "", "What I built"), make("dd", "", project.implementation));
+  details.append(make("dt", "", "What I learned"), make("dd", "", project.learning));
+  content.append(details);
+
+  const tags = make("ul", "tag-list");
+  project.technologies.forEach(technology => tags.append(make("li", "", technology)));
+  content.append(tags);
+
+  const links = make("div", "project-links");
+  if (project.live) addProjectLink(links, project.live, "Live demo");
+  addProjectLink(links, project.repository, "GitHub");
+  content.append(links);
+  card.append(visual, content);
+  return card;
+}
+
+function addProjectLink(container, href, label) {
+  const link = make("a", "", label);
+  link.href = href;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.append(make("i"));
+  link.lastElementChild.dataset.lucide = label === "GitHub" ? "github" : "arrow-up-right";
+  link.lastElementChild.setAttribute("aria-hidden", "true");
+  container.append(link);
 }
 
 function renderFilters() {
   const filters = $("#filters");
   filters.replaceChildren();
+  const categories = ["All", ...new Set(projects.map(project => project.category))];
 
-  ["All", "Frontend", "Backend & Software", "Cloud & DevOps", "Data & Analytics"].forEach(filter => {
-    const button = make("button", "", filter);
+  categories.forEach(category => {
+    const button = make("button", "filter-button", category);
     button.type = "button";
-    button.setAttribute("aria-pressed", String(filter === activeFilter));
-    button.addEventListener("click", () => setFilter(filter));
+    button.setAttribute("aria-pressed", String(category === activeFilter));
+    button.addEventListener("click", () => {
+      activeFilter = category;
+      renderFilters();
+      renderProjects();
+    });
     filters.append(button);
   });
-}
-
-function addProjectLink(links, url, label, icon) {
-  if (!url) return;
-  const link = document.createElement("a");
-  link.href = url;
-  link.target = "_blank";
-  link.rel = "noopener noreferrer";
-  link.append(make("i"));
-  link.firstElementChild.setAttribute("data-lucide", icon);
-  link.firstElementChild.setAttribute("aria-hidden", "true");
-  link.append(document.createTextNode(label));
-  links.append(link);
 }
 
 function renderProjects() {
   const grid = $("#projectGrid");
   grid.replaceChildren();
-
-  const visibleProjects = projects.filter(project =>
-    activeFilter === "All" || project.categories.includes(activeFilter)
-  );
-
-  if (!visibleProjects.length) {
-    grid.append(make("p", "empty", "No projects are listed in this area yet."));
-    return;
-  }
-
-  visibleProjects.forEach(project => {
-    const card = make("article", "project-card");
-    const visual = make("div", `project-visual ${project.visual}`);
-    visual.setAttribute("aria-hidden", "true");
-    const visualContent = make("div", "project-visual-inner");
-    visualContent.append(
-      make("span", "project-mark", project.mark),
-      make("span", "project-caption", project.caption)
-    );
-    visual.append(visualContent);
-
-    const content = make("div", "project-content");
-    const heading = make("div", "project-heading");
-    heading.append(make("h3", "", project.name));
-    if (project.status) heading.append(make("span", "project-status", project.status));
-    content.append(heading, make("p", "project-description", project.purpose));
-
-    const tags = make("ul", "tag-list");
-    project.tech.forEach(technology => tags.append(make("li", "", technology)));
-    content.append(tags);
-
-    const highlights = make("ul", "project-highlights");
-    project.highlights.forEach(highlight => highlights.append(make("li", "", highlight)));
-    content.append(highlights);
-
-    const links = make("div", "project-links");
-    addProjectLink(links, project.live, "Live demo", "arrow-up-right");
-    addProjectLink(links, project.code, "Source code", "github");
-    if (links.childElementCount) content.append(links);
-
-    card.append(visual, content);
-    grid.append(card);
-  });
-
+  projects
+    .filter(project => activeFilter === "All" || project.category === activeFilter)
+    .forEach(project => grid.append(createProjectCard(project)));
   window.lucide?.createIcons();
 }
 
-function setFilter(filter) {
-  activeFilter = filter;
-  renderFilters();
-  renderProjects();
-}
-
 function renderSkills() {
-  const grid = $("#skillGrid");
-  Object.entries(skills).forEach(([category, items]) => {
-    const card = make("section", "skill-card");
-    card.append(make("h3", "", category));
+  const list = $("#skillGrid");
+  skills.forEach(group => {
+    const row = make("section", "skill-row");
+    row.append(make("h3", "", group.category));
     const tags = make("ul", "tag-list");
-    items.forEach(item => tags.append(make("li", "", item)));
-    card.append(tags);
-    grid.append(card);
+    group.items.forEach(skill => tags.append(make("li", "", skill)));
+    row.append(tags);
+    list.append(row);
   });
 }
 
 function renderTimeline() {
   const list = $("#timeline");
-  timeline.forEach(item => {
-    const entry = make("li");
-    entry.append(make("small", "", item.date), make("h3", "", item.title), make("p", "", item.text));
+  timeline.forEach((item, index) => {
+    const entry = make("li", "timeline-item");
+    entry.append(make("span", "timeline-index", String(index + 1).padStart(2, "0")));
+    const content = make("div", "timeline-content");
+    content.append(make("p", "timeline-label", item.label), make("h3", "", item.title), make("p", "timeline-description", item.description));
+    entry.append(content);
     list.append(entry);
   });
 }
@@ -254,23 +246,23 @@ function renderTimeline() {
 function initTheme() {
   const button = $("#themeToggle");
   const icon = button.querySelector("[data-lucide]");
-  let theme = "dark";
+  let theme = "light";
 
   try {
-    theme = localStorage.getItem("portfolio-theme") === "light" ? "light" : "dark";
+    theme = localStorage.getItem("portfolio-theme") === "dark" ? "dark" : "light";
   } catch (error) {
     console.warn("Could not read the saved theme preference.", error);
   }
 
   const applyTheme = nextTheme => {
     theme = nextTheme;
-    const isLight = theme === "light";
+    const isDark = theme === "dark";
     document.documentElement.dataset.theme = theme;
-    button.setAttribute("aria-pressed", String(isLight));
-    button.setAttribute("aria-label", `Switch to ${isLight ? "dark" : "light"} theme`);
-    button.title = `Switch to ${isLight ? "dark" : "light"} theme`;
-    icon.setAttribute("data-lucide", isLight ? "moon" : "sun");
-    $("#themeColor").content = isLight ? "#f5f8f5" : "#101613";
+    button.setAttribute("aria-pressed", String(isDark));
+    button.setAttribute("aria-label", `Switch to ${isDark ? "light" : "dark"} theme`);
+    button.title = `Switch to ${isDark ? "light" : "dark"} theme`;
+    icon.dataset.lucide = isDark ? "sun" : "moon";
+    $("#themeColor").content = isDark ? "#18211c" : "#f4f1e9";
     window.lucide?.createIcons();
   };
 
@@ -286,53 +278,61 @@ function initTheme() {
   });
 }
 
-function initNav() {
-  const nav = $("#nav");
-  const burger = $("#burger");
+function initNavigation() {
+  const header = $("#nav");
+  const toggle = $("#burger");
   const menu = $("#menu");
-  const links = [...menu.querySelectorAll('a[href^="#"]')];
+  const navLinks = [...menu.querySelectorAll('a[href^="#"]')];
 
-  window.addEventListener("scroll", () => nav.classList.toggle("scrolled", window.scrollY > 8), { passive: true });
-  burger.addEventListener("click", () => {
-    const isOpen = menu.classList.toggle("open");
-    burger.setAttribute("aria-expanded", String(isOpen));
-    burger.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
-    burger.querySelector("[data-lucide]").setAttribute("data-lucide", isOpen ? "x" : "menu");
+  const closeMenu = () => {
+    menu.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open navigation");
+    toggle.querySelector("[data-lucide]").dataset.lucide = "menu";
+    window.lucide?.createIcons();
+  };
+
+  toggle.addEventListener("click", () => {
+    const isOpen = menu.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+    toggle.querySelector("[data-lucide]").dataset.lucide = isOpen ? "x" : "menu";
     window.lucide?.createIcons();
   });
 
   menu.addEventListener("click", event => {
-    if (!event.target.closest("a")) return;
-    menu.classList.remove("open");
-    burger.setAttribute("aria-expanded", "false");
-    burger.setAttribute("aria-label", "Open navigation");
-    burger.querySelector("[data-lucide]").setAttribute("data-lucide", "menu");
-    window.lucide?.createIcons();
+    if (event.target.closest('a[href^="#"]')) closeMenu();
   });
 
-  const sections = links
-    .map(link => document.querySelector(link.getAttribute("href")))
-    .filter(Boolean);
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeMenu();
+  });
+
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
+  }, { passive: true });
 
   if ("IntersectionObserver" in window) {
+    const sections = navLinks
+      .map(link => document.querySelector(link.getAttribute("href")))
+      .filter(Boolean);
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-        links.forEach(link => {
-          link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
+        navLinks.forEach(link => {
+          link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
         });
       });
-    }, { rootMargin: "-40% 0px -55% 0px" });
+    }, { rootMargin: "-35% 0px -58% 0px" });
     sections.forEach(section => observer.observe(section));
   }
 }
 
-renderRoles();
 renderFilters();
 renderProjects();
 renderSkills();
 renderTimeline();
 initTheme();
-initNav();
+initNavigation();
 $("#year").textContent = new Date().getFullYear();
 window.lucide?.createIcons();

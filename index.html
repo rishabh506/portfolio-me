@@ -3,185 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101613" id="themeColor">
-  <title>Rishabh Agarwal | Web Development &amp; Cloud Computing</title>
-  <meta name="description" content="Rishabh Agarwal is a BCA student at JECRC University, Jaipur, exploring web development, cloud computing, and DevOps. Open to internships and entry-level opportunities.">
-  <meta property="og:title" content="Rishabh Agarwal | Developer Portfolio">
-  <meta property="og:description" content="Web development, cloud computing, and DevOps projects by Rishabh Agarwal, BCA student at JECRC University.">
+  <meta name="theme-color" content="#f4f1e9" id="themeColor">
+  <title>Rishabh Agarwal — Developer Portfolio</title>
+  <meta name="description" content="Rishabh Agarwal is a BCA student at JECRC University interested in cloud, DevOps, backend development, and building useful software.">
+  <meta property="og:title" content="Rishabh Agarwal — Developer Portfolio">
+  <meta property="og:description" content="Projects and notes from Rishabh Agarwal, a BCA student exploring cloud, DevOps, and software development.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://portfolio-me-lac-eta.vercel.app/">
   <meta name="twitter:card" content="summary">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='12' fill='%2370e1c4'/><text x='20' y='27' font-size='22' text-anchor='middle' fill='%23101613' font-family='Arial' font-weight='700'>R</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' fill='%23263d32'/><text x='20' y='29' font-size='27' text-anchor='middle' fill='%23f4f1e9' font-family='Georgia'>r</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="nav" id="nav">
-    <div class="wrap nav-in">
-      <a class="mark" href="#home" aria-label="Rishabh Agarwal, home">rishabh<span>.</span>dev</a>
-      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open navigation">
+  <header class="site-header" id="nav">
+    <div class="wrap nav-inner">
+      <a class="wordmark" href="#home" aria-label="Rishabh Agarwal, home">rishabh<span>.</span>dev</a>
+      <button class="menu-toggle" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open navigation">
         <i data-lucide="menu" aria-hidden="true"></i>
       </button>
       <nav class="menu" id="menu" aria-label="Primary navigation">
         <a href="#about">About</a>
-        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
-        <a class="nav-resume" href="assets/resume.pdf" download>Resume <i data-lucide="arrow-down-to-line" aria-hidden="true"></i></a>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" aria-pressed="false" title="Switch to light theme">
-          <i data-lucide="sun" aria-hidden="true"></i><span>Theme</span>
+        <a class="resume-link" href="assets/Resume.pdf" download>Resume <i data-lucide="arrow-down-to-line" aria-hidden="true"></i></a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Switch to dark theme">
+          <i data-lucide="moon" aria-hidden="true"></i><span>Theme</span>
         </button>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" id="home">
-      <div class="wrap hero-grid">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="wrap hero-layout">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="availability-dot" aria-hidden="true"></span> OPEN TO INTERNSHIPS &amp; ENTRY-LEVEL ROLES</p>
-          <h1>Building useful things, <span>one project at a time.</span></h1>
-          <p class="hero-name">I'm Rishabh Agarwal.</p>
-          <p class="lead">BCA student focused on web development and cloud computing at JECRC University, Jaipur.</p>
-          <p class="sub">I enjoy turning ideas into practical applications and learning how software is built, automated, and delivered.</p>
-          <div class="cta">
-            <a class="btn" href="#projects">View projects <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-            <a class="btn btn-ghost" href="assets/resume.pdf" download><i data-lucide="download" aria-hidden="true"></i> Download resume</a>
+          <p class="eyebrow"><span class="availability-dot" aria-hidden="true"></span> OPEN TO INTERNSHIP OPPORTUNITIES</p>
+          <p class="hero-greeting">Hi, I'm Rishabh Agarwal.</p>
+          <h1 id="hero-title">Learning to build useful software—and understand what runs it.</h1>
+          <p class="hero-intro">I'm a BCA student at JECRC University, Jaipur, interested in cloud, DevOps, and backend development. I learn by building projects and exploring how applications are made and maintained.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore my projects <i data-lucide="arrow-down-right" aria-hidden="true"></i></a>
+            <a class="button button-secondary" href="assets/Resume.pdf" download>Download resume <i data-lucide="download" aria-hidden="true"></i></a>
+            <a class="text-link" href="#contact">Get in touch <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
           </div>
-          <div class="socials" aria-label="Social links">
-            <a href="https://github.com/rishabh506" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i> GitHub</a>
-            <a href="https://www.linkedin.com/in/rishabh-agarwal-a70384321/?skipRedirect=true" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" aria-hidden="true"></i> LinkedIn</a>
-            <a href="https://www.kaggle.com/rishabhagarwal997889" target="_blank" rel="noopener noreferrer"><i data-lucide="chart-no-axes-column" aria-hidden="true"></i> Kaggle</a>
-            <a href="https://leetcode.com/u/rishabh50666/" target="_blank" rel="noopener noreferrer"><i data-lucide="code-2" aria-hidden="true"></i> LeetCode</a>
-            <a href="https://www.hackerrank.com/profile/rishabhgupta3451" target="_blank" rel="noopener noreferrer"><i data-lucide="terminal" aria-hidden="true"></i> HackerRank</a>
-            <span><i data-lucide="map-pin" aria-hidden="true"></i> Jaipur, India</span>
-          </div>
+          <p class="location">Based in Jaipur, India <span aria-hidden="true">·</span> BCA, Cloud Computing <span aria-hidden="true">·</span> Expected 2027</p>
         </div>
-        <aside class="hero-card" aria-label="Current focus">
-          <div class="hero-card-top"><span>MY CURRENT FOCUS</span><i data-lucide="sparkles" aria-hidden="true"></i></div>
-          <p class="hero-card-title">Learning by<br>building and shipping.</p>
-          <ul class="focus-list">
-            <li><span class="focus-icon"><i data-lucide="panels-top-left" aria-hidden="true"></i></span><span><strong>Web development</strong><small>Interfaces &amp; applications</small></span></li>
-            <li><span class="focus-icon"><i data-lucide="cloud" aria-hidden="true"></i></span><span><strong>Cloud &amp; DevOps</strong><small>Docker, automation &amp; CI/CD</small></span></li>
-            <li><span class="focus-icon"><i data-lucide="database" aria-hidden="true"></i></span><span><strong>Backend &amp; data</strong><small>Python, databases &amp; analytics</small></span></li>
-          </ul>
-          <div class="hero-card-foot"><span>BCA · CLOUD COMPUTING</span><span>JECRC UNIVERSITY</span></div>
+        <aside class="hero-note" aria-label="A note about my current focus">
+          <div class="note-top"><span>FIELD NOTES / 01</span><span>JAIPUR, IN</span></div>
+          <p class="note-title">Curious about the whole stack.</p>
+          <p class="note-copy">From the first interface to the containers and pipelines that help deliver an application.</p>
+          <div class="note-rule"></div>
+          <p class="code-label">CURRENTLY EXPLORING</p>
+          <p class="code-line"><span>focus</span> = cloud + backend + DevOps</p>
+          <p class="note-foot">Learning in public, one project at a time.</p>
         </aside>
       </div>
-      <a class="scroll-cue" href="#about"><span></span> A little more about me</a>
+      <div class="wrap hero-bottom"><span>PORTFOLIO / 2026</span><a href="#about">A little about me <i data-lucide="arrow-down" aria-hidden="true"></i></a></div>
     </section>
 
-    <section class="section" id="about">
-      <div class="wrap about-grid">
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="wrap two-column">
         <div class="section-heading">
-          <p class="eyebrow">A QUICK INTRODUCTION</p>
-          <h2>Curious about how<br>good software <span>gets made.</span></h2>
+          <p class="eyebrow">01 / ABOUT</p>
+          <h2 id="about-title">A student of software, from interface to infrastructure.</h2>
         </div>
         <div class="about-copy">
-          <p>I'm pursuing a Bachelor of Computer Applications at JECRC University, specializing in Cloud Computing and Web Development. I like working across the stack—from shaping a clear interface to understanding the systems behind it.</p>
-          <p>During my DevOps internship at ElevateLab, I gained practical exposure to Docker, containerization, automation, and CI/CD pipelines. I have also built projects using Node.js with Currency and Joke APIs, along with a full-stack project integrating AI.</p>
-          <p>Outside of academics, I served as a team head in the JECRC University Student Council management team, leading more than 80 students. That experience strengthened my teamwork, communication, leadership, and organization.</p>
-          <div class="education-card">
-            <span class="education-icon"><i data-lucide="graduation-cap" aria-hidden="true"></i></span>
-            <div><strong>Bachelor of Computer Applications</strong><p>JECRC University · Jaipur, Rajasthan</p></div>
-            <span class="education-date">Expected 2027</span>
+          <p>I'm studying for a Bachelor of Computer Applications with a specialization in Cloud Computing at JECRC University. I'm interested in how an application fits together: the parts people use, the logic behind them, and the systems that help run them.</p>
+          <p>At ElevateLab, I gained practical exposure to Docker, containerization, automation, and CI/CD pipelines during my DevOps internship. Since then, I've kept learning through coursework and personal projects—from a Python meal planner to small browser games and web interfaces.</p>
+          <p>I'm looking for an internship where I can contribute, learn from a team, and build a stronger foundation in cloud, DevOps, or backend development.</p>
+          <div class="education-inline">
+            <span class="education-mark" aria-hidden="true">RA</span>
+            <div><strong>Bachelor of Computer Applications</strong><span>Cloud Computing · JECRC University · Expected 2027</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-muted" id="capabilities">
+    <section class="section projects-section" id="projects" aria-labelledby="projects-title">
       <div class="wrap">
         <div class="section-intro">
-          <div><p class="eyebrow">HOW I CAN CONTRIBUTE</p><h2>Areas I'm building in.</h2></div>
-          <p>Hands-on learning through coursework, personal projects, and internship exposure.</p>
-        </div>
-        <div class="capability-grid" id="roleGrid"></div>
-      </div>
-    </section>
-
-    <section class="section" id="projects">
-      <div class="wrap">
-        <div class="section-intro">
-          <div><p class="eyebrow">SELECTED WORK</p><h2>Projects with a purpose.</h2></div>
-          <p>Selected builds that show how I approach problem-solving, application development, and practical tools.</p>
+          <div>
+            <p class="eyebrow">02 / SELECTED WORK</p>
+            <h2 id="projects-title">Things I've been making.</h2>
+          </div>
+          <p>Small and substantial projects alike—each one a chance to learn by doing.</p>
         </div>
         <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
         <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+        <p class="project-footnote">Project details reflect the linked repositories. Some projects are learning exercises rather than production services.</p>
       </div>
     </section>
 
-    <section class="section section-muted" id="skills">
-      <div class="wrap">
-        <div class="section-intro">
-          <div><p class="eyebrow">TOOLS &amp; TECHNOLOGIES</p><h2>What I'm learning with.</h2></div>
-          <p>Grouped by area. These reflect my current studies, project work, and hands-on exposure—not years of professional experience.</p>
-        </div>
-        <div class="skills-grid" id="skillGrid"></div>
-      </div>
-    </section>
-
-    <section class="section" id="experience">
-      <div class="wrap experience-grid">
+    <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap two-column">
         <div class="section-heading">
-          <p class="eyebrow">THE PATH SO FAR</p>
-          <h2>Experience &amp;<br><span>education.</span></h2>
-          <p class="section-note">Practical exposure and learning milestones.</p>
+          <p class="eyebrow">03 / TOOLS &amp; TECHNOLOGIES</p>
+          <h2 id="skills-title">What I'm working with.</h2>
+          <p class="section-note">A snapshot of my project work, internship exposure, and current learning—not a rating of expertise.</p>
+        </div>
+        <div class="skills-list" id="skillGrid"></div>
+      </div>
+    </section>
+
+    <section class="section experience-section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap two-column">
+        <div class="section-heading">
+          <p class="eyebrow">04 / EXPERIENCE &amp; EDUCATION</p>
+          <h2 id="experience-title">The path so far.</h2>
         </div>
         <div>
           <ol class="timeline" id="timeline"></ol>
-          <div class="achievement">
-            <span class="achievement-icon"><i data-lucide="trophy" aria-hidden="true"></i></span>
-            <div><p class="eyebrow">HIGHLIGHT</p><h3>Smart India Hackathon</h3><p>Represented JECRC University as part of a student team.</p></div>
+          <div class="timeline-note">
+            <span class="timeline-index" aria-hidden="true">04</span>
+            <div><p class="timeline-label">HACKATHON</p><h3>Smart India Hackathon</h3><p>Participated as part of a university team.</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="contact-section" id="contact">
-      <div class="wrap contact-grid">
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-layout">
         <div>
-          <p class="eyebrow">HAVE AN OPPORTUNITY IN MIND?</p>
-          <h2>Let's start a<br><span>conversation.</span></h2>
-          <p class="contact-intro">I'm open to internships, entry-level opportunities, and relevant projects. If you're hiring or would like to discuss an opportunity, I'd be happy to connect.</p>
-          <a class="email-link" href="mailto:rishabhgupta3451@gmail.com"><i data-lucide="mail" aria-hidden="true"></i> rishabhgupta3451@gmail.com</a>
-          <div class="contact-socials">
-            <a href="https://github.com/rishabh506" target="_blank" rel="noopener noreferrer">GitHub <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/rishabh-agarwal-a70384321/?skipRedirect=true" target="_blank" rel="noopener noreferrer">LinkedIn <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-          </div>
+          <p class="eyebrow">05 / CONTACT</p>
+          <h2 id="contact-title">Have an opportunity or a project in mind?</h2>
+          <p class="contact-copy">I'm open to internship opportunities and conversations about the work I'm learning to do.</p>
         </div>
-        <div class="contact-card">
-          <span class="contact-card-icon"><i data-lucide="send" aria-hidden="true"></i></span>
-          <p class="eyebrow">EMAIL WORKS BEST</p>
-          <h3>Tell me what you're looking for.</h3>
-          <p class="contact-card-copy">Start a conversation about a role, project, or idea. The link opens a new email in your mail app.</p>
-          <a class="btn" href="mailto:rishabhgupta3451@gmail.com?subject=Portfolio%20inquiry">Start an email <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        <div class="contact-details">
+          <a class="contact-email" href="mailto:rishabhgupta3451@gmail.com">rishabhgupta3451@gmail.com <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/rishabh-agarwal-a70384321/?skipRedirect=true" target="_blank" rel="noopener noreferrer">LinkedIn <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+            <a href="https://github.com/rishabh506" target="_blank" rel="noopener noreferrer">GitHub <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+            <a href="assets/Resume.pdf" download>Resume <i data-lucide="download" aria-hidden="true"></i></a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="wrap footer-in">
-      <a class="mark" href="#home">rishabh<span>.</span>dev</a>
-      <div class="footer-socials">
-        <a href="https://github.com/rishabh506" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i> GitHub</a>
-        <a href="https://www.linkedin.com/in/rishabh-agarwal-a70384321/?skipRedirect=true" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" aria-hidden="true"></i> LinkedIn</a>
-        <a href="https://www.kaggle.com/rishabhagarwal997889" target="_blank" rel="noopener noreferrer"><i data-lucide="chart-no-axes-column" aria-hidden="true"></i> Kaggle</a>
-        <a href="https://leetcode.com/u/rishabh50666/" target="_blank" rel="noopener noreferrer"><i data-lucide="code-2" aria-hidden="true"></i> LeetCode</a>
-        <a href="https://www.hackerrank.com/profile/rishabhgupta3451" target="_blank" rel="noopener noreferrer"><i data-lucide="terminal" aria-hidden="true"></i> HackerRank</a>
-      </div>
-      <p>Built with care. © <span id="year"></span> Rishabh Agarwal</p>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="wordmark" href="#home">rishabh<span>.</span>dev</a>
+      <p>Made with care in Jaipur. <span>© <span id="year"></span> Rishabh Agarwal</span></p>
       <a class="back-top" href="#home">Back to top <i data-lucide="arrow-up" aria-hidden="true"></i></a>
     </div>
   </footer>
 
-  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
-  <script src="script.js"></script>
+  <script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script defer src="script.js"></script>
 </body>
 </html>
